@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-// Using Montserrat for a more modern, entertainment-industry feel
-const montserrat = Montserrat({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Ian Patterson - Director of Web, Data & Tools',
@@ -17,14 +16,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-900 dark:to-gray-800`}>
-        {/* Decorative background element */}
-        <div className="fixed inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] opacity-20 dark:opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full blur-3xl transform -translate-y-1/2"></div>
+      <body className={inter.className}>
+        {/* Background gradient with entertainment-focused overlay */}
+        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-gray-800">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 blur-3xl"></div>
           </div>
         </div>
-        <div className="relative">
+        
+        {/* Main content */}
+        <div className="relative min-h-screen text-gray-100">
           {children}
         </div>
       </body>
