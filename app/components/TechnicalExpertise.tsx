@@ -1,55 +1,85 @@
+import { Card, CardContent } from './ui/Card'
+import { Badge } from './ui/Badge'
+import { Section } from './ui/Section'
+
+interface TechCategory {
+  title: string;
+  items: Array<{
+    name: string;
+    highlight?: boolean;
+  }>;
+}
+
 export default function TechnicalExpertise() {
-    const expertise = [
-      {
-        category: "Required Technologies",
-        skills: [
-          { title: "Languages", items: ["JavaScript", "Python", "SQL"] },
-          { title: "Cloud Platforms", items: ["AWS", "Azure"] },
-          { title: "Web Technologies", items: ["Full-stack development", "SEO optimization"] },
-          { title: "Data Management", items: ["Data lakes", "ETL/ELT", "Real-time analytics"] }
-        ]
-      },
-      {
-        category: "Marketing Technology Stack",
-        skills: [
-          { title: "Analytics", items: ["Segment.io", "Branch.io", "Google Analytics"] },
-          { title: "Campaign Tools", items: ["HubSpot", "Google Tag Manager"] },
-          { title: "Visualization", items: ["Looker", "PowerBI"] },
-          { title: "Privacy & Security", items: ["OneTrust", "Data governance frameworks"] }
-        ]
-      },
-      {
-        category: "Emerging Technologies",
-        skills: [
-          { title: "AI/ML", items: ["OpenAI", "Anthropic", "Google Gemini"] },
-          { title: "Web3", items: ["Smart contract integration", "Blockchain analytics"] },
-          { title: "Custom Tools", items: ["Proprietary analytics", "Optimization platforms"] }
-        ]
-      }
-    ];
-  
-    return (
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Technical Expertise</h2>
-        <div className="space-y-8">
-          {expertise.map((category, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                {category.category}
+  const categories: TechCategory[] = [
+    {
+      title: "Required Technologies",
+      items: [
+        { name: "JavaScript", highlight: true },
+        { name: "Python", highlight: true },
+        { name: "SQL", highlight: true },
+        { name: "AWS", highlight: true },
+        { name: "Azure", highlight: true },
+        { name: "Full-stack Development" },
+        { name: "SEO Optimization" },
+        { name: "Data Lakes" },
+        { name: "ETL/ELT" }
+      ]
+    },
+    {
+      title: "Marketing Technology Stack",
+      items: [
+        { name: "Segment.io", highlight: true },
+        { name: "Branch.io", highlight: true },
+        { name: "Google Analytics" },
+        { name: "HubSpot" },
+        { name: "Google Tag Manager" },
+        { name: "Looker" },
+        { name: "PowerBI" },
+        { name: "OneTrust" }
+      ]
+    },
+    {
+      title: "Emerging Technologies",
+      items: [
+        { name: "OpenAI", highlight: true },
+        { name: "Anthropic", highlight: true },
+        { name: "Google Gemini" },
+        { name: "Web3" },
+        { name: "Blockchain Analytics" },
+        { name: "Smart Contracts" }
+      ]
+    }
+  ];
+
+  return (
+    <Section title="Technical Expertise">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {categories.map((category, index) => (
+          <Card key={index} className="h-full">
+            <CardContent>
+              <h3 className="text-lg font-semibold text-purple-400 mb-4">
+                {category.title}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <h4 className="font-medium text-gray-900 dark:text-white">{skill.title}</h4>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
-                      {skill.items.join(" • ")}
-                    </p>
-                  </div>
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((item, itemIndex) => (
+                  <Badge 
+                    key={itemIndex}
+                    className={`
+                      ${item.highlight 
+                        ? 'bg-purple-600 hover:bg-purple-700' 
+                        : 'bg-gray-700 hover:bg-gray-600'
+                      }
+                    `}
+                  >
+                    {item.name}
+                  </Badge>
                 ))}
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    )
-  }
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </Section>
+  );
+}
