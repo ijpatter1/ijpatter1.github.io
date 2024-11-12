@@ -1,3 +1,5 @@
+'use client'  // Add this at the top of the file
+
 import { Download } from 'lucide-react'
 
 export default function Header() {
@@ -23,13 +25,15 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <button
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
-        onClick={() => window.open('/resume.pdf', '_blank')}
       >
         <Download size={20} />
         Download PDF
-      </button>
+      </a>
     </header>
   )
 }
