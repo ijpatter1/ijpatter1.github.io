@@ -1,9 +1,12 @@
-// layout.tsx
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],  // Including regular, medium, semibold and bold weights
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Ian Patterson - Director of Web, Data & Tools',
@@ -17,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <div className="relative min-h-screen bg-white text-black">
           {children}
         </div>
