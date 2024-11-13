@@ -17,15 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Background gradient with entertainment-focused overlay */}
-        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-gray-800">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 blur-3xl"></div>
+        {/* Background gradient with subtle overlay */}
+        <div className="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-200 to-purple-200 blur-3xl"></div>
           </div>
         </div>
         
         {/* Main content */}
-        <div className="relative min-h-screen text-gray-100">
+        <div className="relative min-h-screen text-gray-900">
           {children}
         </div>
       </body>

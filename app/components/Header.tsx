@@ -30,15 +30,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="max-w-4xl mx-auto mb-12 text-center">
-      <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+    <header className="max-w-4xl mx-auto mb-8 text-center">
+      <h1 className="text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
         IAN PATTERSON
       </h1>
-      <h2 className="text-2xl font-semibold mb-6 text-purple-300">
+      <h2 className="text-2xl font-semibold mb-4 text-indigo-700">
         Director of Web, Data & Tools
       </h2>
       
-      <div className="flex flex-wrap justify-center gap-6 text-gray-300">
+      <div className="flex flex-wrap justify-center gap-4 text-gray-600">
         {contactLinks.map((link, index) => {
           const Icon = link.icon;
           return (
