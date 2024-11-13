@@ -4,23 +4,33 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 type Theme = 'dark' | 'light'
 
-type ThemeContextType = {
+interface ThemeContextProps {
   theme: Theme
   toggleTheme: () => void
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const ThemeContext = createContext<ThemeContextProps | undefined>(undefined)
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const [mounted, setMounted] = useState(false)
   const [theme, setTheme] = useState<Theme>('dark')
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme
-    if (savedTheme) {
-      setTheme(savedTheme)
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark')
+    setMounted(true)
+    const stored = localStorage.getItem('theme') as Theme
+    if (stored) {
+      setTheme(stored)
+      document.documentElement.classList.toggle('dark', stored === 'dark')
     }
   }, [])
+
+  if (!mounted) {
+    return <>{children}</>
+  }
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
@@ -38,8 +48,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext)
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider')
+  if (!context) {
+    throw new Error('useTheme must be used within ThemeProvider')
   }
   return context
 }
