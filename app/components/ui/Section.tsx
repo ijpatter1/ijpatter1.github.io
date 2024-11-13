@@ -6,9 +6,9 @@ interface SectionProps {
   
   export function Section({ title, children, className = '' }: SectionProps) {
     return (
-      <section className={`mb-8 ${className}`}>
+      <section className={`mb-6 ${className}`}>
         {title && (
-          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl font-bold mb-4">
             {title}
           </h2>
         )}

@@ -10,7 +10,7 @@ interface ContactLink {
 }
 
 export default function Header() {
-  const contactLinks: ContactLink[] = [
+  const contactLinks = [
     {
       href: "mailto:ianjamespatterson@gmail.com",
       icon: Mail,
@@ -31,36 +31,32 @@ export default function Header() {
 
   return (
     <header className="max-w-4xl mx-auto mb-8 text-center">
-      <h1 className="text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
-        IAN PATTERSON
-      </h1>
-      <h2 className="text-2xl font-semibold mb-4 text-indigo-700">
-        Director of Web, Data & Tools
-      </h2>
+      <h1 className="text-4xl font-bold mb-2">IAN PATTERSON</h1>
+      <h2 className="text-xl mb-4">Director of Web, Data & Tools</h2>
       
-      <div className="flex flex-wrap justify-center gap-4 text-gray-600">
+      <div className="flex flex-wrap justify-center gap-4">
         {contactLinks.map((link, index) => {
           const Icon = link.icon;
           return (
             <a
               key={index}
               href={link.href}
-              className="flex items-center gap-2 hover:text-purple-400 transition-colors"
+              className="flex items-center gap-2"
               {...(link.external ? {
                 target: "_blank",
                 rel: "noopener noreferrer"
               } : {})}
             >
-              <Icon size={18} />
+              <Icon size={16} />
               {link.text}
             </a>
           );
         })}
         <span className="flex items-center gap-2">
-          <MapPin size={18} />
+          <MapPin size={16} />
           Windsor, Berkshire
         </span>
       </div>
     </header>
-  )
+  );
 }

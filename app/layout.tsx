@@ -1,3 +1,4 @@
+// layout.tsx
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -17,15 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Background gradient with subtle overlay */}
-        <div className="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-200 to-purple-200 blur-3xl"></div>
-          </div>
-        </div>
-        
-        {/* Main content */}
-        <div className="relative min-h-screen text-gray-900">
+        <div className="relative min-h-screen bg-white text-black">
           {children}
         </div>
       </body>
