@@ -10,7 +10,7 @@ interface ContactLink {
 }
 
 export default function Header() {
-  const contactLinks = [
+  const contactLinks: ContactLink[] = [
     {
       href: "mailto:ianjamespatterson@gmail.com",
       icon: Mail,
