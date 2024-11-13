@@ -1,6 +1,7 @@
 import { Card, CardContent } from './ui/Card'
 import { Badge } from './ui/Badge'
 import { Section } from './ui/Section'
+import { theme } from '../config/theme'
 
 interface TechCategory {
   title: string;
@@ -54,23 +55,18 @@ export default function TechnicalExpertise() {
 
   return (
     <Section title="Technical Expertise">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {categories.map((category, index) => (
-          <Card key={index} className="h-full">
+          <Card key={index}>
             <CardContent>
-              <h3 className="text-lg font-semibold text-purple-400 mb-4">
+              <h3 className={`text-lg font-semibold mb-4 ${theme.colors.text.primary}`}>
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.items.map((item, itemIndex) => (
                   <Badge 
                     key={itemIndex}
-                    className={`
-                      ${item.highlight 
-                        ? 'bg-purple-600 hover:bg-purple-700' 
-                        : 'bg-gray-700 hover:bg-gray-600'
-                      }
-                    `}
+                    className={item.highlight ? theme.colors.primary.badge : 'bg-gray-50'}
                   >
                     {item.name}
                   </Badge>

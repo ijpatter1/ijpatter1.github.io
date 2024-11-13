@@ -1,6 +1,7 @@
 import { Card, CardContent } from './ui/Card'
 import { Badge } from './ui/Badge'
 import { Section } from './ui/Section'
+import { theme } from '../config/theme'
 
 interface Achievement {
   title: string;
@@ -53,22 +54,22 @@ export default function Experience() {
         <CardContent className="space-y-6">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="text-xl font-semibold text-purple-400">UP Entertainment</h3>
-              <p className="text-gray-400">Data & Analytics Engineering Manager</p>
+              <h3 className={`text-xl font-semibold ${theme.colors.text.primary}`}>UP Entertainment</h3>
+              <p className={theme.colors.text.secondary}>Data & Analytics Engineering Manager</p>
             </div>
-            <Badge className="bg-purple-600 hover:bg-purple-700">2021 - Present</Badge>
+            <Badge>2021 - Present</Badge>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {achievements.map((achievement, index) => (
-              <div key={index} className="rounded-lg bg-gray-800/50 p-4">
-                <h4 className="text-lg font-semibold text-purple-400 mb-3">
+              <div key={index} className="border border-gray-200 rounded p-4">
+                <h4 className={`text-lg font-semibold mb-3 ${theme.colors.text.primary}`}>
                   {achievement.title}
                 </h4>
                 <ul className="space-y-2">
                   {achievement.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className="flex items-start gap-2 text-gray-300">
-                      <span className="mt-2 w-1.5 h-1.5 bg-purple-400 rounded-full flex-shrink-0"></span>
+                    <li key={pointIndex} className={`flex items-start gap-2 ${theme.colors.text.secondary}`}>
+                      <span className="mt-2 w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></span>
                       <span>{point}</span>
                     </li>
                   ))}

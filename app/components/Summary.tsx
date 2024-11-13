@@ -1,12 +1,13 @@
 import { Card, CardContent } from './ui/Card'
 import { Section } from './ui/Section'
+import { theme } from '../config/theme'
 
 export default function Summary() {
   return (
     <Section>
       <Card>
         <CardContent>
-          <p className="text-gray-300 leading-relaxed">
+          <p className={theme.colors.text.primary}>
             Innovation-focused technology leader with proven success in pushing boundaries of marketing 
             technology in the entertainment industry. Extensive experience developing client-facing web 
             solutions, real-time analytics platforms, and proprietary tools that drive marketing success. 
