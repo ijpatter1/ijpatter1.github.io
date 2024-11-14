@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ian Patterson - Interactive Resume
 
-## Getting Started
+A modern, interactive resume built with Next.js, TypeScript, and Tailwind CSS. Features a responsive design, print-optimized layout, and downloadable PDF functionality.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Stack**: Built with Next.js 15.0, React 19.0, and TypeScript
+- **Responsive Design**: Mobile-first approach with adaptive layouts
+- **Interactive Elements**: Hover states and animations for engaging user experience
+- **Accessibility**: WCAG compliance with semantic HTML and proper ARIA attributes
+- **PDF Export**: Client-side PDF generation with html2canvas and jsPDF
+
+## 🛠 Technology Stack
+
+- **Framework**: Next.js 15.0.3
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 3.4.1
+- **UI Components**: Custom components with shadcn/ui integration
+- **Icons**: Lucide React
+- **PDF Generation**: html2canvas + jsPDF
+- **Deployment**: GitHub Pages
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/resume-site.git
+
+# Navigate to project directory
+cd resume-site
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+/
+├── .github/
+│   └── workflows/        # GitHub Actions workflows
+├── app/
+│   ├── components/       # React components
+│   │   ├── ui/          # Reusable UI components
+│   │   └── ...          # Feature components
+│   ├── config/          # Configuration files
+│   ├── globals.css      # Global styles
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Home page
+├── public/              # Static assets
+└── configuration files  # Various config files
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Deployment
 
-## Learn More
+The site is automatically deployed to GitHub Pages using GitHub Actions. The workflow is triggered on push to the main branch.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Manual deployment
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🖨 Print Optimization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site includes custom print styles for optimal PDF generation:
 
-## Deploy on Vercel
+- Custom media queries for print layout
+- Print-specific typography adjustments
+- Badge optimization for PDF export
+- Page break considerations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👥 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
