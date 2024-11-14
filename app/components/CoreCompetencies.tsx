@@ -9,39 +9,39 @@ interface Competency {
   colour: 'agency-blue' | 'agency-violet' | 'agency-green' | 'agency-pink' | 'agency-yellow' | 'agency-red';
 }
 
-export default function CoreCompetencies() {
-  const competencies: Competency[] = [
-    {
-      title: "Client Solutions",
-      skills: ["Web development leadership", "Marketing campaign integration", "Real-time analytics"],
-      colour: 'agency-blue' // Marketing & Digital focus
-    },
-    {
-      title: "Technical Innovation",
-      skills: ["Proprietary tool development", "Emerging tech implementation (AI/ML, Web3)"],
-      colour: 'agency-violet' // Innovation & Future Tech
-    },
-    {
-      title: "Data Architecture",
-      skills: ["Cloud infrastructure", "Data lakes", "ETL/ELT", "Real-time visualization"],
-      colour: 'agency-green' // Infrastructure & Systems
-    },
-    {
-      title: "Marketing Technology",
-      skills: ["Attribution modeling", "Campaign optimization", "User journey analytics"],
-      colour: 'agency-pink' // Creative & Marketing Tech
-    },
-    {
-      title: "Strategic Leadership",
-      skills: ["Cross-functional collaboration", "Stakeholder management", "Agile methodologies"],
-      colour: 'agency-yellow' // Leadership & Management
-    },
-    {
-      title: "Privacy & Security",
-      skills: ["Data governance frameworks", "Regulatory compliance", "Security best practices"],
-      colour: 'agency-red' // Security & Compliance
-    }
-  ];
+  export default function CoreCompetencies() {
+    const competencies: Competency[] = [
+      {
+        title: "Web Development",
+        skills: ["Full-stack architecture", "Platform integration", "Performance tuning", "SEO optimization"],
+        colour: 'agency-blue'
+      },
+      {
+        title: "Data Architecture",
+        skills: ["Cloud infrastructure", "Data lakes & warehouses", "ETL/ELT pipelines", "Real-time visualization"],
+        colour: 'agency-violet'
+      },
+      {
+        title: "Marketing Technology",
+        skills: ["Attribution modeling", "Campaign optimization", "User journey analytics", "Platform integration"],
+        colour: 'agency-pink'
+      },
+      {
+        title: "Technical Innovation",
+        skills: ["Custom tool development", "AI/ML implementation", "Emerging tech integration", "POC development"],
+        colour: 'agency-green'
+      },
+      {
+        title: "Technical Leadership",
+        skills: ["Team mentoring", "Cross-functional collaboration", "Stakeholder management", "Project delivery"],
+        colour: 'agency-yellow'
+      },
+      {
+        title: "Privacy & Security",
+        skills: ["Data governance", "Compliance frameworks", "Security architecture", "Best practices"],
+        colour: 'agency-red'
+      }
+    ];
 
   return (
     <Section title="Core Competencies">

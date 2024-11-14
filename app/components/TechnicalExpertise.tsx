@@ -14,44 +14,63 @@ interface TechCategory {
 export default function TechnicalExpertise() {
   const categories: TechCategory[] = [
     {
-      title: "Required Technologies",
+      title: "Web Technologies",
       color: "agency-blue",
       items: [
+        { name: "HTML", highlight: true },
+        { name: "CSS", highlight: true },
         { name: "JavaScript", highlight: true },
         { name: "Python", highlight: true },
+        { name: "TypeScript", highlight: true },
+        { name: "REST APIs", highlight: true },
+        { name: "PHP" },
+        { name: "Wordpress" },
+        { name: "React" },
+        { name: "Next.js" },
+        { name: "Node.js" },
+        { name: "GraphQL" },
+        { name: "Django" },
+        { name: "Flask" },
+        { name: "Docker" },
+        { name: "CI/CD" }
+      ]
+    },
+    {
+      title: "Data & Analytics",
+      color: "agency-violet",
+      items: [
         { name: "SQL", highlight: true },
         { name: "AWS", highlight: true },
         { name: "Azure", highlight: true },
-        { name: "Full-stack Development" },
-        { name: "SEO Optimization" },
-        { name: "Data Lakes" },
-        { name: "ETL/ELT" }
+        { name: "GCP", highlight: true},
+        { name: "BigQuery", highlight: true },
+        { name: "Redshift" },
+        { name: "ETL/ELT" },
+        { name: "Cloud Run" },
+        { name: "AWS Glue" },
+        { name: "Looker" },
+        { name: "PowerBI" },
+        { name: "MySQL" },
+        { name: "PostgreSQL" }
       ]
     },
     {
-      title: "Marketing Technology Stack",
-      color: "agency-violet",
+      title: "Platforms & Tools",
+      color: "agency-green",
       items: [
         { name: "Segment.io", highlight: true },
         { name: "Branch.io", highlight: true },
-        { name: "Google Analytics" },
-        { name: "HubSpot" },
-        { name: "Google Tag Manager" },
-        { name: "Looker" },
-        { name: "PowerBI" },
-        { name: "OneTrust" }
-      ]
-    },
-    {
-      title: "Emerging Technologies",
-      color: "agency-green",
-      items: [
+        { name: "GTM", highlight: true },
         { name: "OpenAI", highlight: true },
-        { name: "Anthropic", highlight: true },
-        { name: "Google Gemini" },
-        { name: "Web3" },
-        { name: "Blockchain Analytics" },
-        { name: "Smart Contracts" }
+        { name: "Brightcove" },
+        { name: "Vimeo OTT" },
+        { name: "GrowthBook" },
+        { name: "HubSpot" },
+        { name: "OneTrust" },
+        { name: "GA4" },
+        { name: "Yoast SEO" },
+        { name: "Mouseflow" },
+        { name: "LangChain" }
       ]
     }
   ];

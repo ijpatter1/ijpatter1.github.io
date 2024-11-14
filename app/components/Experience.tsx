@@ -26,39 +26,39 @@ const AchievementSection = ({ title, points }: Achievement) => (
 export default function Experience() {
   const achievements: Achievement[] = [
     {
-      title: "Strategic Leadership & Client Success",
+      title: "Technical Leadership",
       points: [
-        "Lead cross-functional teams across Marketing, Creative, and Client Solutions to deliver integrated technology solutions",
-        "Drive collaboration between engineering and marketing teams to enhance campaign performance through data-driven insights",
-        "Spearhead development of internal multi-touch marketing attribution model achieving 90%+ accuracy in campaign tracking",
-        "Establish and maintain client relationships through successful delivery of web and analytics solutions"
+        "Lead metadata management team collaborating with Programming, Operations and Streaming to implement centralized content data system",
+        "Hands-on development of multi-platform subscription bundle, coordinating engineering efforts across checkout, streaming, and billing systems",
+        "Drive implementation of marketing attribution solutions through integration of Segment, Branch, and Google Tag Manager",
+        "Direct technical strategy and implementation of Verizon +play platform integration, establishing framework for future distribution partnerships"
       ]
     },
     {
-      title: "Web Development & Marketing Integration",
+      title: "Web Development & Platform Integration",
       points: [
-        "Architect and deploy client-facing web solutions integrating real-time analytics and personalization",
-        "Lead development of Verizon +play platform integration, expanding distribution channels and improving user experience",
-        "Design and implement custom middleware solutions achieving 8% upsell rate through enhanced checkout flow",
-        "Integrate MarTech stack (Segment, Branch, GTM) improving marketing attribution accuracy and campaign optimization"
+        "Develop enhanced checkout website increasing bundle service adoption by 8%",
+        "Lead B2B platform integration with Verizon +play, expanding distribution channels and revenue streams",
+        "Design and implement custom middleware solutions for multi-service subscription management",
+        "Integrate marketing technology stack (Segment, Branch, GTM) to optimize attribution and analytics"
       ]
     },
     {
-      title: "Data & Analytics Innovation",
+      title: "Data Architecture & Analytics",
       points: [
-        "Create real-time marketing dashboards driving 25% improvement in campaign performance",
-        "Maintain 99% uptime for mission-critical data pipelines supporting marketing operations",
-        "Lead metadata management initiative across 3,000+ titles ensuring consistent user experience",
-        "Implement privacy-first data collection framework ensuring compliance while maximizing marketing insights"
+        "Architect and maintain mission-critical data pipelines achieving 99% uptime for executive dashboards",
+        "Lead metadata management initiative ensuring consistency across 3,000+ video titles",
+        "Develop internal multi-touch marketing attribution model achieving 90%+ accuracy in web campaign tracking",
+        "Implement privacy-first data collection framework ensuring regulatory compliance across platforms"
       ]
     },
     {
-      title: "Proprietary Tools & Emerging Technology",
+      title: "Tool Development & Innovation",
       points: [
-        "Develop custom marketing analytics tools enabling real-time campaign optimization",
-        "Design and implement AI-powered content discovery system enhancing user engagement",
-        "Lead integration of Web3 technologies for enhanced user experience and engagement tracking",
-        "Pioneer implementation of generative AI workflows for content optimization and personalization"
+        "Develop ETL pipelines and data transformations for marketing and streaming analytics",
+        "Build integrations between subscription management and streaming platforms to enable multi-service bundling",
+        "Create automated metadata management and content distribution workflows increasing delivery accuracy to from 30% to 98%+",
+        "Design and implement generative AI workflow for video metadata generation"
       ]
     }
   ];
