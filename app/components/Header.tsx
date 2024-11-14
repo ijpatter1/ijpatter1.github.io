@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className="max-w-4xl mx-auto mb-8 text-center">
       <h1 className="text-4xl font-bold mb-2">IAN PATTERSON</h1>
-      <h2 className="text-xl mb-4">Director of Web, Data & Tools</h2>
+      <h2 className="text-xl mb-4">Director, Web, Data & Tools</h2>
       
       <div className="flex flex-wrap justify-center gap-4">
         {contactLinks.map((link, index) => {

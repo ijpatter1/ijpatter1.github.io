@@ -57,7 +57,7 @@ export default function Experience() {
       points: [
         "Develop ETL pipelines and data transformations for marketing and streaming analytics",
         "Build integrations between subscription management and streaming platforms to enable multi-service bundling",
-        "Create automated metadata management and content distribution workflows increasing delivery accuracy to from 30% to 98%+",
+        "Create automated metadata management and content distribution workflows increasing delivery accuracy from 30% to 98%+",
         "Design and implement generative AI workflow for video metadata generation"
       ]
     }
