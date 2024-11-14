@@ -32,14 +32,14 @@ export default function CoreCompetencies() {
 
   return (
     <Section title="Core Competencies">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">  {/* Reduced from gap-4 to gap-3 */}
         {competencies.map((comp, index) => (
           <Card key={index}>
             <CardContent>
               <h3 className={`font-semibold mb-2 ${theme.colors.text.primary}`}>
                 {comp.title}
               </h3>
-              <ul className="space-y-1">
+              <ul className="space-y-1">  {/* Keep space-y-1 as is for readability */}
                 {comp.skills.map((skill, skillIndex) => (
                   <li key={skillIndex} className={`${theme.colors.text.secondary} text-sm`}>
                     • {skill}

@@ -55,14 +55,14 @@ export default function TechnicalExpertise() {
 
   return (
     <Section title="Technical Expertise">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">  {/* Reduced from gap-4 to gap-3 */}
         {categories.map((category, index) => (
           <Card key={index}>
             <CardContent>
-              <h3 className={`text-lg font-semibold mb-4 ${theme.colors.text.primary}`}>
+              <h3 className={`text-lg font-semibold mb-3 ${theme.colors.text.primary}`}>  {/* Reduced from mb-4 to mb-3 */}
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2">  {/* Keep gap-2 for badge spacing */}
                 {category.items.map((item, itemIndex) => (
                   <Badge 
                     key={itemIndex}
