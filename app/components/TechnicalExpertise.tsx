@@ -15,7 +15,7 @@ export default function TechnicalExpertise() {
   const categories: TechCategory[] = [
     {
       title: "Web Technologies",
-      color: "agency-blue",
+      color: "agency-yellow",
       items: [
         { name: "HTML", highlight: true },
         { name: "CSS", highlight: true },
@@ -37,7 +37,7 @@ export default function TechnicalExpertise() {
     },
     {
       title: "Data & Analytics",
-      color: "agency-violet",
+      color: "agency-red",
       items: [
         { name: "SQL", highlight: true },
         { name: "AWS", highlight: true },
@@ -56,18 +56,18 @@ export default function TechnicalExpertise() {
     },
     {
       title: "Platforms & Tools",
-      color: "agency-green",
+      color: "agency-pink",
       items: [
         { name: "Segment.io", highlight: true },
         { name: "Branch.io", highlight: true },
         { name: "GTM", highlight: true },
         { name: "OpenAI", highlight: true },
+        { name: "GA4", highlight: true},
         { name: "Brightcove" },
         { name: "Vimeo OTT" },
         { name: "GrowthBook" },
         { name: "HubSpot" },
         { name: "OneTrust" },
-        { name: "GA4" },
         { name: "Yoast SEO" },
         { name: "Mouseflow" },
         { name: "LangChain" }

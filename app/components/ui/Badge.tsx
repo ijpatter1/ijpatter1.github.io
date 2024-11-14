@@ -7,12 +7,12 @@ interface BadgeProps {
 export function Badge({ children, className = '', color = 'none' }: BadgeProps) {
   const colorStyles = {
     none: 'bg-white border border-gray-200 text-gray-900',
-    'agency-blue': 'bg-agency-blue/10 border border-agency-blue/20 text-gray-900',
-    'agency-red': 'bg-agency-red/10 border border-agency-red/20 text-gray-900',
-    'agency-yellow': 'bg-agency-yellow/10 border border-agency-yellow/20 text-gray-900',
-    'agency-green': 'bg-agency-green/10 border border-agency-green/20 text-gray-900',
-    'agency-pink': 'bg-agency-pink/10 border border-agency-pink/20 text-gray-900',
-    'agency-violet': 'bg-agency-violet/10 border border-agency-violet/20 text-gray-900'
+    'agency-blue': 'bg-agency-blue/30 border border-agency-blue/20 text-gray-900',
+    'agency-red': 'bg-agency-red/30 border border-agency-red/20 text-gray-900',
+    'agency-yellow': 'bg-agency-yellow/30 border border-agency-yellow/20 text-gray-900',
+    'agency-green': 'bg-agency-green/30 border border-agency-green/20 text-gray-900',
+    'agency-pink': 'bg-agency-pink/30 border border-agency-pink/20 text-gray-900',
+    'agency-violet': 'bg-agency-violet/30 border border-agency-violet/20 text-gray-900'
   };
 
   return (
