@@ -14,12 +14,12 @@ interface Competency {
       {
         title: "Web Development",
         skills: ["Full-stack architecture", "Platform integration", "Performance tuning", "SEO optimization"],
-        colour: 'agency-blue'
+        colour: 'agency-yellow'
       },
       {
         title: "Data Architecture",
         skills: ["Cloud infrastructure", "Data lakes & warehouses", "ETL/ELT pipelines", "Real-time visualization"],
-        colour: 'agency-violet'
+        colour: 'agency-red'
       },
       {
         title: "Marketing Technology",
@@ -29,23 +29,23 @@ interface Competency {
       {
         title: "Technical Innovation",
         skills: ["Custom tool development", "AI/ML implementation", "Emerging tech integration", "POC development"],
-        colour: 'agency-green'
+        colour: 'agency-violet'
       },
       {
         title: "Technical Leadership",
         skills: ["Team mentoring", "Cross-functional collaboration", "Stakeholder management", "Project delivery"],
-        colour: 'agency-yellow'
+        colour: 'agency-blue'
       },
       {
         title: "Privacy & Security",
         skills: ["Data governance", "Compliance frameworks", "Security architecture", "Best practices"],
-        colour: 'agency-red'
+        colour: 'agency-green'
       }
     ];
 
   return (
     <Section title="Core Competencies">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {competencies.map((comp, index) => (
           <Card key={index} hoverColor={comp.colour}>
             <CardContent>
