@@ -8,6 +8,21 @@ interface Achievement {
   points: string[];
 }
 
+const AchievementSection = ({ title, points }: Achievement) => (
+  <div className="mb-6 last:mb-0">
+    <h4 className={`text-lg font-semibold mb-3 ${theme.colors.text.primary}`}>
+      {title}
+    </h4>
+    <ul className="space-y-2">
+      {points.map((point, index) => (
+        <li key={index} className={`${theme.colors.text.secondary}`}>
+          • {point}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 export default function Experience() {
   const achievements: Achievement[] = [
     {
@@ -51,32 +66,34 @@ export default function Experience() {
   return (
     <Section title="Professional Experience">
       <Card>
-        <CardContent className="space-y-6">
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className={`text-xl font-semibold ${theme.colors.text.primary}`}>UP Entertainment</h3>
-              <p className={theme.colors.text.secondary}>Data & Analytics Engineering Manager</p>
+        <CardContent>
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-6">
+            <div className="flex flex-col">
+              <h3 className={`text-xl font-semibold ${theme.colors.text.primary}`}>
+                UP Entertainment
+              </h3>
+              <p className={`${theme.colors.text.secondary} text-lg`}>
+                Data & Analytics Engineering Manager
+              </p>
             </div>
-            <Badge>2021 - Present</Badge>
+            <div className="flex items-center sm:items-start">
+            <Badge
+              className={`
+                text-xs md:text-sm py-1 px-2 bg-white border border-gray-200 text-gray-900 print:text-xs print:py-0.5 print:px-1.5
+              `}
+              aria-label="Employment period">
+              November 2021 - Present
+            </Badge>
+            </div>
           </div>
 
-          <div className="space-y-6">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="border border-gray-200 rounded p-4">
-                <h4 className={`text-lg font-semibold mb-3 ${theme.colors.text.primary}`}>
-                  {achievement.title}
-                </h4>
-                <ul className="space-y-2">
-                  {achievement.points.map((point, pointIndex) => (
-                    <li key={pointIndex} className={`flex items-start gap-2 ${theme.colors.text.secondary}`}>
-                      <span className="mt-2 w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0"></span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {achievements.map((achievement, index) => (
+            <AchievementSection 
+              key={index} 
+              title={achievement.title} 
+              points={achievement.points}
+            />
+          ))}
         </CardContent>
       </Card>
     </Section>
