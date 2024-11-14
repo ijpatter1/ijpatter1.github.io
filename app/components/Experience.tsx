@@ -81,6 +81,7 @@ export default function Experience() {
               className={`
                 text-xs md:text-sm py-1 px-2 bg-white border border-gray-200 text-gray-900 print:text-xs print:py-0.5 print:px-1.5
               `}
+              color="agency-violet"
               aria-label="Employment period">
               November 2021 - Present
             </Badge>

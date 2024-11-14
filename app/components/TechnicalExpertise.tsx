@@ -5,6 +5,7 @@ import { theme } from '../config/theme'
 
 interface TechCategory {
   title: string;
+  color: 'agency-blue' | 'agency-red' | 'agency-yellow' | 'agency-green' | 'agency-pink' | 'agency-violet';
   items: Array<{
     name: string;
     highlight?: boolean;
@@ -15,6 +16,7 @@ export default function TechnicalExpertise() {
   const categories: TechCategory[] = [
     {
       title: "Required Technologies",
+      color: "agency-blue",
       items: [
         { name: "JavaScript", highlight: true },
         { name: "Python", highlight: true },
@@ -29,6 +31,7 @@ export default function TechnicalExpertise() {
     },
     {
       title: "Marketing Technology Stack",
+      color: "agency-violet",
       items: [
         { name: "Segment.io", highlight: true },
         { name: "Branch.io", highlight: true },
@@ -42,6 +45,7 @@ export default function TechnicalExpertise() {
     },
     {
       title: "Emerging Technologies",
+      color: "agency-green",
       items: [
         { name: "OpenAI", highlight: true },
         { name: "Anthropic", highlight: true },
@@ -66,13 +70,8 @@ export default function TechnicalExpertise() {
                 {category.items.map((item, itemIndex) => (
                   <Badge 
                     key={itemIndex}
-                    className={`
-                      text-sm py-1.5 px-3
-                      ${item.highlight 
-                        ? 'bg-white border border-gray-200 text-gray-900' 
-                        : 'bg-gray-50 text-gray-700'}
-                      print:text-xs print:py-0.5 print:px-1.5
-                    `}
+                    color={item.highlight ? category.color : 'none'}
+                    className="text-sm py-1.5 px-3 print:text-xs print:py-0.5 print:px-1.5"
                   >
                     {item.name}
                   </Badge>
