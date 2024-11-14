@@ -1,7 +1,6 @@
 import { Card, CardContent } from './ui/Card'
 import { Badge } from './ui/Badge'
 import { Section } from './ui/Section'
-import { theme } from '../config/theme'
 
 interface TechCategory {
   title: string;
