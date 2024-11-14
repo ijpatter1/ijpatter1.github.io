@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Ian Patterson - Director of Web, Data & Tools',
+  title: 'Ian Patterson - Director, Web, Data & Tools',
   description: 'Innovation-focused technology leader with proven success in pushing boundaries of marketing technology in the entertainment industry.',
 }
 
